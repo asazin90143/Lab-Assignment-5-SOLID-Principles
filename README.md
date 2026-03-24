@@ -1,5 +1,11 @@
 # Lab-Assignment-5-SOLID-Principles
 
+Refer to the code below
+
+* You must provide the description of the problem and the UML Class Diagram solution in readMe file.
+* Include all the codes in your gitHub repository.
+* Submit the link of your solution written in your gitHub repository
+
 ## Improve the following codes to implement SOLID principles in OOP
 
 public interface Order {
