@@ -58,3 +58,24 @@ public class OrderTest {
     order.sendEmailNotification("johndoe@example.com");
   }
 }
+<<<<<<< HEAD
+=======
+
+## Problem Description
+
+The original system featured a single, monolithic `Order` interface that contained methods for calculating totals, placing orders, generating invoices, and sending email notifications.
+
+This design violated two key SOLID principles:
+
+1. **Single Responsibility Principle (SRP):** The implementing class (`OrderAction`) was responsible for multiple unrelated tasks (math calculations, file generation, and email communications). Any change to how emails are sent or how invoices are generated would force a change in this core class.
+2. **Interface Segregation Principle (ISP):** By grouping all these actions into one `Order` interface, the system forced any new order types to implement methods they might not need (e.g., forcing a simple order to implement `generateInvoice` even if no invoice is required).
+
+## Solution
+
+We refactored the code by breaking the "fat" interface into smaller, highly-cohesive interfaces (`OrderProcessor`, `InvoiceGenerator`, and `Notifier`). We then created specific classes that handle one single responsibility each. This makes the system modular, easier to test, and flexible for future additions (like adding an `SmsNotifier` without altering existing code).
+
+## UML Class Diagram Solution
+
+Here is the UML diagram representing the refactored, SOLID-compliant structure:
+![alt text](image.png)
+>>>>>>> 0fc5dde (UML)
