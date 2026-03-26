@@ -56,10 +56,9 @@ public class OrderTest {
     // These methods might not be needed for all orders
     order.generateInvoice("order_123.pdf");
     order.sendEmailNotification("johndoe@example.com");
-  }
+
 }
-<<<<<<< HEAD
-=======
+}
 
 ## Problem Description
 
@@ -78,4 +77,3 @@ We refactored the code by breaking the "fat" interface into smaller, highly-cohe
 
 Here is the UML diagram representing the refactored, SOLID-compliant structure:
 ![alt text](image.png)
->>>>>>> 0fc5dde (UML)
